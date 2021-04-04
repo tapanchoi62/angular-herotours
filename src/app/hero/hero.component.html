@@ -1,0 +1,42 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heros"
+      [class.selected]="hero===selectedHero"
+      >
+    <a>
+      <span routerLink="/herodetail/{{hero.id}}" class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" style="float:right" title="delete hero"
+            (click)="delete(hero)">
+      x
+    </button>
+  </li>
+</ul>
+
+
+<div *ngIf="selectedHero">
+  <h1> <span class="badge">{{selectedHero.id}}</span> {{selectedHero.name}} </h1>
+</div>
+
+<h1>
+    Search Hero
+</h1>
+<input [(ngModel)]="textsearch" />
+<button class="btnsearch" (click)="search(textsearch)">
+      Tìm kiếm
+</button>
+
+<ul class="herosearch">
+  <li *ngFor="let hero of herosearch"
+      [class.selected]="hero===selectedHero"
+      >
+    <a>
+      <span routerLink="/herodetail/{{hero.id}}" class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" style="float:right" title="delete hero"
+            (click)="delete(hero)">
+      x
+    </button>
+  </li>
+</ul>
+

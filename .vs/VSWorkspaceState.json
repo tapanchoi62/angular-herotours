@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\hero",
+    "\\src\\app\\hero-detail",
+    "\\src\\app\\hero-search"
+  ],
+  "SelectedNode": "\\src\\app\\hero-search\\hero-search.component.ts",
+  "PreviewInSolutionExplorer": false
+}
